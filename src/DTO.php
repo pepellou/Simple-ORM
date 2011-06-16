@@ -1,5 +1,7 @@
 <?php
 
+require_once dirname(__File__).'/../src/StringUtils.php';
+
 	class DTO {
 
 		var $id;
@@ -112,7 +114,7 @@
 			if ($whereClause == "")
 				$whereClause = "1 = 1";
 
-			$data = Database:query("SELECT * FROM $tableName WHERE ($whereClause)");
+			//$data = Database:query("SELECT * FROM $tableName WHERE ($whereClause)");
 			$instances = array();
 			if ($data != null) {
 				foreach ($data as $row) {
