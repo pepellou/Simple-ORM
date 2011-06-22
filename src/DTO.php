@@ -1,6 +1,6 @@
 <?php
 
-require_once dirname(__File__).'/../src/StringUtils.php';
+require_once dirname(__File__).'/../stringUtils/src/StringUtils.php';
 
 	class DTO {
 

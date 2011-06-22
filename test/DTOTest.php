@@ -1,6 +1,7 @@
 <?php
 
-require_once dirname(__File__).'/../src/DTO.php';
+require_once dirname(__File__).'/../../stringUtils/releases/v0.1/config.php';
+require_once dirname(__File__).'/../config.php';
 
 	class DTOTest extends PHPUnit_Framework_TestCase {
 
