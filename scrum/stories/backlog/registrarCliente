@@ -1,0 +1,8 @@
+Como Pablo
+Quiero registrar un nuevo cliente
+Para poder enviarle facturas
+
+
+Los datos obligatorios de un cliente para una factura son: Nombre, NIF, Dirección, CP, población, provincia
+Puedo seleccionar el nuevo cliente en una factura
+No puedo introducir clientes duplicados. Verificamos por NIF
