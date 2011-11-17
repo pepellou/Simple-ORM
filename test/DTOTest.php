@@ -12,7 +12,7 @@ require_once dirname(__File__).'/../config.php';
 		public function test_newDTOIsntSaved(
 		) {
 			$dto = new DTO();
-			$this->assertEquals(-1 , $dto->getId());
+			$this->assertFalse($dto->isSaved());	
 		}
 
 		public function test_canSetValuesOnBuild(
@@ -26,6 +26,7 @@ require_once dirname(__File__).'/../config.php';
 			
 			$dto = new DTO();
 			$dto->save();
+			$this->assertTrue($dto->isSaved());	
 		}
 	}
 

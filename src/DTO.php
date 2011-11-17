@@ -5,7 +5,12 @@ require_once dirname(__FILE__).'/../config.php';
 // Dummy class - TODO extract
 class Database {
 
-	public static function queryOne() {}
+	public static function queryOne(
+		$query
+	) {
+		if (StringUtils::startsWith($query, "SELECT MAX"))
+			return array('id' => 1);
+	}
 	public static function query() {}
 
 }
@@ -23,6 +28,11 @@ class DTO {
 		$id = -1
 	) {
 		$this->id = $id;
+	}
+
+	public function isSaved(
+	) {
+		return ($this->getId() != -1);
 	}
 
 	public function __construct(
