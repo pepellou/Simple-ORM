@@ -2,6 +2,14 @@
 
 require_once dirname(__FILE__).'/../config.php';
 
+// Dummy class - TODO extract
+class Database {
+
+	public static function queryOne() {}
+	public static function query() {}
+
+}
+
 class DTO {
 
 	var $id;
