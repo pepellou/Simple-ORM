@@ -27,6 +27,21 @@ require_once dirname(__File__).'/../config.php';
 			$dto->save();
 			$this->assertTrue($dto->isSaved());	
 		}
+
+		public function test_getByIdReturnsNullWhenNoObjectsPersisted(
+		) {
+			$obj = new PersistibleObject(array("name" => "test"));
+			$this->assertNull(PersistibleObject::getById(1));
+		}
+
+		public function test_onSaveItsPersisted(
+		) {
+			$obj = new PersistibleObject(array("name" => "test"));
+			$obj->save();
+			$this->assertNotNull(PersistibleObject::getById(1));
+			$this->assertEquals($obj, PersistibleObject::getById(1));
+		}
+
 	}
 
 
