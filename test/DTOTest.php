@@ -23,7 +23,6 @@ require_once dirname(__File__).'/../config.php';
 
 		public function test_canSave(
 		) {
-			
 			$dto = new DTO();
 			$dto->save();
 			$this->assertTrue($dto->isSaved());	
